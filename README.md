@@ -1,26 +1,46 @@
-# Super Trunfo em C 🃏
+# Super Trunfo - Países do Mundo
 
-Este projeto é uma implementação do jogo **Super Trunfo** em linguagem C.  
-O programa permite cadastrar duas cartas de cidades, calcular atributos como **densidade populacional** e **PIB per capita**, além de comparar as cartas para determinar a vencedora em cada atributo, incluindo o cálculo de um **Super Poder**.
+Jogo de cartas Super Trunfo em C para comparar países.
 
----
+## Como Compilar
 
-## ⚙️ Funcionalidades
+```bash
+gcc super_trunfo.c -o super_trunfo
+```
 
-- Cadastro de duas cartas com:
-  - Estado (A–H)
-  - Código (ex: A01, B02)
-  - Nome da cidade
-  - População (armazenada em `unsigned long int`)
-  - Área (km²)
-  - PIB (em bilhões de reais)
-  - Número de pontos turísticos
-- Cálculo automático de:
-  - Densidade populacional (`população / área`)
-  - PIB per capita (`PIB / população`)
-  - Super Poder (soma dos atributos numéricos, considerando o **inverso da densidade populacional**)
-- Comparação entre cartas:
-  - Para densidade populacional → **vence a menor**
-  - Para os demais atributos (inclusive Super Poder) → **vence a maior**
-- Exibição clara dos resultados:
-  - Mostra carta vencedora de cada atributo (`Carta 1 venceu (1)` ou `Carta 2 venceu (0)`).
+## Como Executar
+
+```bash
+./super_trunfo
+```
+
+## Como Jogar
+
+1. Digite os dados do primeiro país (nome, população, área, PIB, pontos turísticos)
+2. Digite os dados do segundo país
+3. Escolha um atributo para comparar (1 a 5)
+4. Veja qual país venceu!
+
+## Atributos
+
+- **1** - População (maior vence)
+- **2** - Área (maior vence)
+- **3** - PIB (maior vence)
+- **4** - Pontos Turísticos (maior vence)
+- **5** - Densidade Demográfica (menor vence)
+
+## Exemplo
+
+```
+Digite o nome do pais: Brasil
+Digite a populacao: 215000000
+Digite a area em km^2: 8515767
+Digite o PIB (em bilhoes de reais): 9500
+Digite o numero de pontos turisticos: 150
+
+...
+
+Digite sua escolha (1-5): 1
+
+Resultado: Carta 1 (Brasil) venceu!
+```
